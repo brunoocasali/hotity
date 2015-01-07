@@ -7,11 +7,4 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  if ENV['RAILS_ENV'] == 'test'
-    require 'simplecov'
-    require 'coveralls'
-
-    SimpleCov.start 'rails'
-    Coveralls.wear!
-  end
 end
