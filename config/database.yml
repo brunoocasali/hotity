@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: hotity_development
+  host: "localhost"
+  username: "dba"
+  password: "bd1ef3dd14d85aab4996ee5e68aab40362791e936b26142b"
+
+test:
+  <<: *default
+  database: hotity_test
+  host: "localhost"
+  username: "dba"
+  password: "bd1ef3dd14d85aab4996ee5e68aab40362791e936b26142b"
+
+production:
+  <<: *default
+  database: hotity_production
