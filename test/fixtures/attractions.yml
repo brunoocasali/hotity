@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  midia: MyString
-  display_date: MyString
-  user_id: 
+under_the_dome:
+  name: Under the dome
+  midia: TV
+  display_date: <%= Time.zone.now %>
+  user_id: 1
 
-two:
-  name: MyString
-  midia: MyString
-  display_date: MyString
-  user_id: 
+two_and_a_half_Men:
+  name: Two and a Half Men
+  midia: TV
+  display_date: <%= Time.zone.now %>
+  user_id: 2
