@@ -1,0 +1,35 @@
+<%= form_for(@attraction, :html => { :multipart => true }) do |f| %>
+<div class="form-group">
+  <% if @attraction.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@attraction.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+      <% @attraction.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+</div>
+<div class="form-group">
+  <%= f.label :user_id, 'Usuário' %>
+  <%= f.collection_select(:user_id, User.all, :id, :name, {:prompt => 'Selecione um usuário'}, {class: 'form-control'}) %>
+</div>
+<div class="form-group">
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name, class: 'form-control', placeholder: 'Seu nome aqui zé' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :midia, 'Mídia' %>
+  <%= f.text_field :midia, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :display_date, 'Horário' %>
+  <%= f.datetime_field :display_date, class: 'form-control' %>
+</div>
+<p class="pull-right">
+  <%= f.submit 'salvar', class: 'btn btn-success' %>
+</p>
+<% end %>

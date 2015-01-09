@@ -1,0 +1,71 @@
+<section class="container users">
+  <div class="page-header">
+    <h1>Atrações</h1>
+  </div>
+    <div role="tabpanel">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#attraction-new" aria-controls="attraction-new" role="tab" data-toggle="tab">Novas Atrações</a>
+        </li>
+        <li role="presentation">
+          <a href="#attraction-old" aria-controls="attraction-old" role="tab" data-toggle="tab">Atrações Terminadas</a>
+        </li>
+      </ul>
+      <p>
+        ver aqui <a href="http://www.datatables.net/examples/api/row_details.html">solução para mostar</a>
+        ou aqui <a href="https://datatables.net/examples/server_side/row_details.html">solução para mostar</a>
+      </p>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="attraction-new">
+          <div class="table-responsve">
+            <table id="attractions" class="table table-bordered table-hover">
+              <thead>
+                <th></th>
+                <th>Atração</th>
+                <th>Usuário</th>
+                <th>mídia</th>
+                <th>Horário</th>
+              </thead>
+              <tbody>
+                <% @attractions_new.each do |attraction| %>
+                <tr id="<%= attraction.id %>">
+                  <td></td>
+                  <td><%= attraction.name %></td>
+                  <td><%= attraction.user.name %></td>
+                  <td><%= attraction.midia %></td>
+                  <td><%= format_date(attraction.display_date) %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="attraction-old">
+          <div class="table-responsve">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <th>Atração</th>
+                <th>Usuário</th>
+                <th>mídia</th>
+                <th>Horário</th>
+              </thead>
+              <tbody>
+                <% @attractions_old.each do |attraction| %>
+                <tr>
+                  <td><%= attraction.name %></td>
+                  <td><%= attraction.user.name %></td>
+                  <td><%= attraction.midia %></td>
+                  <td><%= format_date(attraction.display_date) %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

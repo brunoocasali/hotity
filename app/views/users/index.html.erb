@@ -1,0 +1,125 @@
+<section class="container users">
+  <div class="page-header">
+    <h1>Usuários</h1>
+  </div>
+  <div class="table-responsve">
+    <table id="users" class="table table-bordered table-hover">
+      <thead>
+        <th>Nome</th>
+        <th>Email</th>
+      </thead>
+      <tbody>
+      <% @users.each do |user| %>
+        <tr data-toggle="collapse" data-target="#collapseme<%= user.id %>">
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+        </tr>
+        <tr id="collapseme<%= user.id %>" class="collapse out">
+          <td colspan="5" class="attraction-datax">
+            <div class="panel-group" id="accordion<%= user.id %>" role="tablist" aria-multiselectable="true">
+            <% user.attractions.each do |attraction| %>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading<%= attraction.id %>">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion<%= user.id %>" href="#collapse<%= attraction.id %>" aria-expanded="true" aria-controls="collapse<%= attraction.id %>">
+                      <%= attraction.name %>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse<%= attraction.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<%= attraction.id %>">
+                  <div class="panel-body">
+                    <b>Mídia:</b> <%= attraction.midia %> <br>
+                    <b>Horário:</b> <%= attraction.display_date %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <!-- begin left nav -->
+    <div class="col-sm-2">
+      <div class="left-nav">
+        <div class="accordion" id="accordion2">
+          <!-- group start -->
+          <div class="panel">
+            <div class="accordion-heading">
+              <a class="accordion-toggle leftnav-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                Main Link 1
+              </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse"> <!-- add "in" to class to load acc section open -->
+              <div class="accordion-inner">
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Product 1</a></div> <!-- add "selected-section" to add background color -->
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Product 2</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Product 3</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Product 4</a></div>
+              </div>
+            </div>
+          </div> <!-- end group -->
+          <!-- group start -->
+          <div class="panel">
+            <div class="accordion-heading">
+              <a class="accordion-toggle leftnav-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                Main Link 2
+              </a>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+              </div>
+            </div>
+          </div> <!-- end group -->
+          <!-- group start -->
+          <div class="panel">
+            <div class="accordion-heading">
+              <a class="accordion-toggle leftnav-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                Main Link 3
+              </a>
+            </div>
+            <div id="collapseThree" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+              </div>
+            </div>
+          </div> <!-- end group -->
+          <!-- group start -->
+          <div class="panel">
+            <div class="accordion-heading">
+              <a class="accordion-toggle leftnav-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                Main Link 4
+              </a>
+            </div>
+            <div id="collapseFour" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+              </div>
+            </div>
+          </div> <!-- end group -->
+          <!-- group start -->
+          <div class="panel">
+            <div class="accordion-heading">
+              <a class="accordion-toggle leftnav-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                Main Link 5
+              </a>
+            </div>
+            <div id="collapseFive" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+                <div class="left-nav-section"><a href="product.html" class="leftnav-secondary">Link</a></div>
+              </div>
+            </div>
+          </div> <!-- end group -->
+        </div>
+      </div>
+    </div>
+    <!-- /left nav -->
+  </div>
+</section>

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150107060651) do
   create_table "attractions", force: :cascade do |t|
     t.string   "name"
     t.string   "midia"
-    t.string   "display_date"
+    t.datetime "display_date"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
