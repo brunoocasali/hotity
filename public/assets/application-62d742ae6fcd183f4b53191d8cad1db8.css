@@ -1,4 +1,157 @@
-@charset "UTF-8";
+@charset "UTF-8";@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:800);
+/* line 5, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+body {
+  background-color: #EFF7F9;
+  color: #000;
+}
+
+/* line 10, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.skyy-label {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* line 17, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default {
+  background-color: #005171;
+  border-color: #014A73;
+}
+
+/* line 22, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+  color: #EFF7F9;
+}
+
+/* line 27, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-brand {
+  font-family: 'Lobster', cursive, Arial, serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+/* line 33, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #81B8DB;
+}
+
+/* line 40, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.btn-primary {
+  color: #FFF;
+  background-color: #005171;
+  border-color: #014A73;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* line 48, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #FFF;
+  background-color: #1276BF;
+  border-color: #1276BF;
+}
+
+/* line 55, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.form-control {
+  border: none;
+  height: auto;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* line 62, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* line 67, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.page-header {
+  font-family: 'Raleway', sans-serif, Arial, serif;
+  border-bottom: 1px solid #005171;
+}
+
+/* line 72, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #005171;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+/* line 83, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-bordered > thead > tr > th,
+.table-bordered,
+.table-bordered > tbody > tr > td {
+  border-color: #005171;
+}
+
+/* line 89, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-bordered > thead > tr > th {
+  text-transform: uppercase;
+}
+
+/* line 93, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-hover > tbody > tr:hover {
+  background-color: #1276BF;
+  color: #fff;
+}
+
+/* line 98, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li > a:hover {
+  border-color: #1276BF;
+}
+
+/* line 101, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #1276BF;
+}
+
+/* line 104, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li > a {
+  color: #000;
+}
+
+/* line 108, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel {
+  background-color: #005171;
+  color: #fff;
+}
+
+/* line 113, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel-default {
+  border-color: #005171;
+}
+
+/* line 117, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel-default > .panel-heading {
+  color: #FFF;
+  background-color: #005171;
+  border-color: #005171;
+}
+
+/* line 123, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.collapse:hover {
+  background: none !important;
+}
+
+/* line 127, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.jumbotron {
+  font-family: 'Raleway', sans-serif, Arial, serif;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,6 +168,9 @@
 
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:800);
 /* line 9, /home/joridos/Documentos/github/hotity/vendor/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8116,8 +8272,153 @@ button.close {
     display: none !important;
   }
 }
-/* line 18, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/application.css.scss */
-.attraction,
-.attraction-data {
-  display: none;
+/* line 5, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+body {
+  background-color: #EFF7F9;
+  color: #000;
+}
+
+/* line 10, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.skyy-label {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* line 17, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default {
+  background-color: #005171;
+  border-color: #014A73;
+}
+
+/* line 22, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+  color: #EFF7F9;
+}
+
+/* line 27, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-brand {
+  font-family: 'Lobster', cursive, Arial, serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+/* line 33, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #81B8DB;
+}
+
+/* line 40, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.btn-primary {
+  color: #FFF;
+  background-color: #005171;
+  border-color: #014A73;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* line 48, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #FFF;
+  background-color: #1276BF;
+  border-color: #1276BF;
+}
+
+/* line 55, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.form-control {
+  border: none;
+  height: auto;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* line 62, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* line 67, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.page-header {
+  font-family: 'Raleway', sans-serif, Arial, serif;
+  border-bottom: 1px solid #005171;
+}
+
+/* line 72, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #005171;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+/* line 83, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-bordered > thead > tr > th,
+.table-bordered,
+.table-bordered > tbody > tr > td {
+  border-color: #005171;
+}
+
+/* line 89, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-bordered > thead > tr > th {
+  text-transform: uppercase;
+}
+
+/* line 93, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.table-hover > tbody > tr:hover {
+  background-color: #1276BF;
+  color: #fff;
+}
+
+/* line 98, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li > a:hover {
+  border-color: #1276BF;
+}
+
+/* line 101, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #1276BF;
+}
+
+/* line 104, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.nav-tabs > li > a {
+  color: #000;
+}
+
+/* line 108, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel {
+  background-color: #005171;
+  color: #fff;
+}
+
+/* line 113, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel-default {
+  border-color: #005171;
+}
+
+/* line 117, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.panel-default > .panel-heading {
+  color: #FFF;
+  background-color: #005171;
+  border-color: #005171;
+}
+
+/* line 123, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.collapse:hover {
+  background: none !important;
+}
+
+/* line 127, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.jumbotron {
+  font-family: 'Raleway', sans-serif, Arial, serif;
 }

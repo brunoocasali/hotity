@@ -13,5 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.mask.min
 //= require turbolinks
 //= require_self
+$(document).on("page:change", function(){
+  $('input[type="datetime"]').mask('00/00/0000 00:00:00');
+});

@@ -13,17 +13,11 @@
           <a href="#attraction-old" aria-controls="attraction-old" role="tab" data-toggle="tab">Atrações Terminadas</a>
         </li>
       </ul>
-      <p>
-        ver aqui <a href="http://www.datatables.net/examples/api/row_details.html">solução para mostar</a>
-        ou aqui <a href="https://datatables.net/examples/server_side/row_details.html">solução para mostar</a>
-      </p>
-      <!-- Tab panes -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="attraction-new">
           <div class="table-responsve">
             <table id="attractions" class="table table-bordered table-hover">
               <thead>
-                <th></th>
                 <th>Atração</th>
                 <th>Usuário</th>
                 <th>mídia</th>
@@ -32,7 +26,6 @@
               <tbody>
                 <% @attractions_new.each do |attraction| %>
                 <tr id="<%= attraction.id %>">
-                  <td></td>
                   <td><%= attraction.name %></td>
                   <td><%= attraction.user.name %></td>
                   <td><%= attraction.midia %></td>
