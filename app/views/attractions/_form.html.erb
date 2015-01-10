@@ -1,33 +1,33 @@
 <%= form_for(@attraction, :html => { :multipart => true }) do |f| %>
-<div class="form-group">
-  <% if @attraction.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@attraction.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-    <ul>
-      <% @attraction.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
+  <% if flash[:notice] %>
+    <div class="form-group">
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= flash[:notice] %>
+      </div>
+    </div>
+    <% flash.clear %>
   <% end %>
-</div>
 <div class="form-group">
   <%= f.label :user_id, 'Usuário', class: 'skyy-label' %>
   <%= f.collection_select(:user_id, User.all, :id, :name, {:prompt => 'Selecione um usuário'}, {class: 'form-control'}) %>
+  <%= error_tag @attraction, :user_id %>
 </div>
 <div class="form-group">
   <%= f.label :name, 'Nome', class: 'skyy-label' %>
   <%= f.text_field :name, class: 'form-control', placeholder: 'Nome da atração' %>
+  <%= error_tag @attraction, :name %>
 </div>
 
 <div class="form-group">
   <%= f.label :midia, 'Mídia', class: 'skyy-label' %>
   <%= f.text_field :midia, class: 'form-control', placeholder: 'Midía pela qual ela será visualizada' %>
+  <%= error_tag @attraction, :midia %>
 </div>
 <div class="form-group">
   <%= f.label :display_date, 'Horário', class: 'skyy-label' %>
   <%= f.datetime_field :display_date, class: 'form-control', placeholder: 'Horário da atração' %>
+  <%= error_tag @attraction, :display_date %>
 </div>
 <p class="pull-right">
   <%= f.submit 'salvar', class: 'btn btn-primary' %>

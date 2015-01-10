@@ -2,6 +2,15 @@
   <div class="page-header">
     <h1>Atrações</h1>
   </div>
+  <% if flash[:notice] %>
+  <div class="form-group">
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%= flash[:notice] %>
+    </div>
+  </div>
+  <% flash.clear %>
+  <% end %>
     <div role="tabpanel">
 
       <!-- Nav tabs -->

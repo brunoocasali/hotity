@@ -11,13 +11,25 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def edit
+  end
+
   def create
     @attraction = Attraction.new(attraction_params)
 
     if @attraction.save
-      redirect_to attractions_path, notice: 'Attraction was successfully created.'
+      redirect_to attractions_path, notice: 'Atração criada com sucesso.'
     else
+      flash[:notice] = "Não foi possível salvar as informações."
       render :new
+    end
+  end
+
+  def update
+    if @attraction.update(attraction_params)
+      redirect_to attractions_path, notice:  'Atração atualizada com sucesso.'
+    else
+      render :edit
     end
   end
 
