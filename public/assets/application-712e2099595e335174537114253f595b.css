@@ -170,6 +170,11 @@ body {
   font-family: 'Raleway', sans-serif, Arial, serif;
 }
 
+/* line 164, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.alert-danger {
+  padding: 10px;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -8457,4 +8462,9 @@ body {
 /* line 160, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
 .jumbotron {
   font-family: 'Raleway', sans-serif, Arial, serif;
+}
+
+/* line 164, /home/joridos/Documentos/github/hotity/app/assets/stylesheets/themes/_skyy.scss */
+.alert-danger {
+  padding: 10px;
 }

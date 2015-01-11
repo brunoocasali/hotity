@@ -31,6 +31,7 @@
                 <th>Usuário</th>
                 <th>mídia</th>
                 <th>Horário</th>
+                <th>Opções</th>
               </thead>
               <tbody>
                 <% @attractions_new.each do |attraction| %>
@@ -39,6 +40,11 @@
                   <td><%= attraction.user.name %></td>
                   <td><%= attraction.midia %></td>
                   <td><%= format_date(attraction.display_date) %></td>
+                  <td>
+                    <%= link_to 'Editar', edit_attraction_path(attraction), class: 'btn btn-default' %>
+                    <%= link_to 'Apagar', attraction, method: :delete,
+                      data: { confirm: 'Apagar atração?' }, class: 'btn btn-default' %>
+                  </td>
                 </tr>
                 <% end %>
               </tbody>
@@ -53,6 +59,7 @@
                 <th>Usuário</th>
                 <th>mídia</th>
                 <th>Horário</th>
+                <th>Opções</th>
               </thead>
               <tbody>
                 <% @attractions_old.each do |attraction| %>
@@ -61,6 +68,11 @@
                   <td><%= attraction.user.name %></td>
                   <td><%= attraction.midia %></td>
                   <td><%= format_date(attraction.display_date) %></td>
+                  <td>
+                    <%= link_to 'Editar', edit_attraction_path(attraction), class: 'btn btn-default' %>
+                    <%= link_to 'Apagar', attraction, method: :delete,
+                    data: { confirm: 'Apagar atração?' }, class: 'btn btn-default' %>
+                  </td>
                 </tr>
                 <% end %>
               </tbody>

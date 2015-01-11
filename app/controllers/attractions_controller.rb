@@ -20,7 +20,7 @@ class AttractionsController < ApplicationController
     if @attraction.save
       redirect_to attractions_path, notice: 'Atração criada com sucesso.'
     else
-      flash[:notice] = "Não foi possível salvar as informações."
+      flash[:notice] = 'Não foi possível salvar as informações.'
       render :new
     end
   end
@@ -31,6 +31,12 @@ class AttractionsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @attraction.destroy
+      flash[:notice] = 'Atração apagada com sucesso.'
+      redirect_to attractions_path
   end
 
   private
